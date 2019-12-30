@@ -1,0 +1,27 @@
+{
+  "name": "detect-pull-reqs",
+  "version": "1.0.0",
+  "description": "Detect pull requests between two branches.",
+  "main": "detect.js",
+  "dependencies": {
+    "@octokit/rest": "^16.36.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grassedge/detect-pull-reqs.git"
+  },
+  "keywords": [
+    "github",
+    "pull-request"
+  ],
+  "author": "grassedge",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/grassedge/detect-pull-reqs/issues"
+  },
+  "homepage": "https://github.com/grassedge/detect-pull-reqs#readme"
+}
