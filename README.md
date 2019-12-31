@@ -22,4 +22,5 @@ const detect = require('detect-pull-reqs');
 
 ```shell
 $ node index.js grassedge/detect-pull-reqs production master
+# --> [ 'https://github.com/grassedge/detect-pull-reqs/pull/1' ]
 ```
