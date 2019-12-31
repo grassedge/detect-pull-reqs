@@ -1,7 +1,8 @@
 # detect-pull-reqs
 Detect pull requests between two branches.
 
-- index.js
+*example.js*
+
 ```javascript
 const detect = require('detect-pull-reqs');
 
@@ -15,12 +16,25 @@ const detect = require('detect-pull-reqs');
     base,
     head
   });
+
+  // or pass octokit instance.
+  const Octokit = require('@octokit/rest')
+  const pulls = await detect({
+    octokit: Octokit({
+      ...
+    }),
+    owner,
+    repo,
+    base,
+    head
+  });
+
   console.log(pulls.map(p => p.html_url));
 
 })(process.argv.slice(2)).catch(e => console.log(e));
 ```
 
 ```shell
-$ node index.js grassedge/detect-pull-reqs production master
+$ GITHUB_TOKEN=... node index.js grassedge/detect-pull-reqs production master
 # --> [ 'https://github.com/grassedge/detect-pull-reqs/pull/1' ]
 ```

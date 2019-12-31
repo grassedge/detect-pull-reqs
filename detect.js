@@ -1,10 +1,12 @@
 const Octokit = require('@octokit/rest');
 
-module.exports = async function detect({ token, owner, repo, base, head }) {
-  const octokit = Octokit({
-    auth: token,
-    // TODO: Support GitHub Enterprise.
-  });
+module.exports = async function detect({ octokit, token, owner, repo, base, head }) {
+  if (!octokit) {
+    octokit = Octokit({
+      auth: token,
+      // TODO: Support GitHub Enterprise.
+    });
+  }
 
   const compareRes = await octokit.repos.compareCommits({
     owner,
