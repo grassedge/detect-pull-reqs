@@ -1,6 +1,6 @@
 {
   "name": "detect-pull-reqs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Detect pull requests between two branches.",
   "main": "detect.js",
   "dependencies": {
