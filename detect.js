@@ -31,6 +31,7 @@ module.exports = async function detect({ octokit, token, owner, repo, base, head
       q: [
         `repo:${owner}/${repo}`,
         'is:pr',
+        'is:merged',
         ...(chunk.map(c => c.sha.substring(0, 7)))
       ].join("+")
     });
